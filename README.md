@@ -57,7 +57,7 @@ First, navigate to the project through the terminal
 Enter the following command to check the Cypress version.
 #### _npx cypress --version_
 If you get Cypress version as "10.9.0", then run the following command to run the test inside the local Docker
-docker run -it -v $PWD:/e2e -w /e2e cypress/included:10.9.0
+#### _docker run -it -v $PWD:/e2e -w /e2e cypress/included:10.9.0_
 Note: if you don't have the Docker locally, then this will install first and then execute the test.
       Also run as Admin, if you get permission issue.
 ![DockerLocal001](https://user-images.githubusercontent.com/13979537/193386376-0c553b70-c14d-4c48-bbdc-f757444eaf93.png)
