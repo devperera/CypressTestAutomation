@@ -1,0 +1,5 @@
+{
+    "acceptAllCookiesElement": "#consent_prompt_submit",
+    "covid19LinkElement": "ul[class='footer__links layout__cols cols_2'] li",
+    "selectRXSuvElement": ".sec__index_explore > :nth-child(1) > .tab__panels_main > .panel--active > .tab__panels_sub > .subpanel--active > .tab__item_models > .is_wider > .tab__item_model > .tab__item_txt"
+}

@@ -1,0 +1,16 @@
+{
+  "firstNameElement": "#input_first_name",
+  "lastNameElement": "#input_last_name",
+  "emailAddressElement": "#input_email_address",
+  "phoneNumberElement": "#input_phone_number",
+  "preferredDateElement": "#datepicker_preferred_date",
+  "preferredTimeTextElement": "[data-id='select_preferred_time'] > :nth-child(1) > .choices > .choices__inner > .choices__list",
+  "preferredTimeSelectElement": "div[class='choices__list choices__list--dropdown is-active'] div[id='choices--select_preferred_time-item-choice-3']",
+  "saleConsultantTextElement": "[data-id='select_preferred_sales_consultant'] > :nth-child(1) > .choices > .choices__inner > .choices__list",
+  "saleConsultantSelectElement": "div[class='choices__list choices__list--dropdown is-active'] div[id='choices--select_preferred_sales_consultant-item-choice-3']",
+  "paxTextElement": "[data-id='select_pax'] > :nth-child(1) > .choices > .choices__inner > .choices__list",
+  "paxSelectElement": "div[class='choices__list choices__list--dropdown is-active'] div[id='choices--select_pax-item-choice-3']",
+  "privacyPolicyCheckBox": "#checkbox_privacy_policy",
+  "marketingCheckBox": "#checkbox_marketing",
+  "submitButtonElement": "button[class='mdc-button mdc-button--unelevated cta__dialog_form']"
+}

@@ -1,0 +1,4 @@
+{
+  "rxGalleryElement": ".swiper-slide-active > .link_lightbox > .slider__gallery_ar > .lazy",
+  "bookATestDriveButtonElement": ":nth-child(4) > :nth-child(1) > .mdc-button"
+}
