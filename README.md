@@ -72,11 +72,11 @@ Can see the execution video file as well.
 ## Cucumber - Feature file
 In a test case, the Test scenario will be written in the feature, which is supported by Cucumber.
 It gives much clarity to test scenarios. So anyone can read it. Also able to use Cucumber features as well.
-
 ![FeatureFile](https://user-images.githubusercontent.com/13979537/193392751-62e604ba-0733-4018-82e2-2cf80303ed1b.png)
 
 ## Test execution video
 By default Cypress will generate the video of the execution at "cypress/videos"*.
+
 https://user-images.githubusercontent.com/13979537/193392812-a96ac2a1-f939-4bd1-bd05-6c9f1a588688.mp4
 
 ## Customize the Cypress setting according to your needs
