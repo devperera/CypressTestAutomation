@@ -18,7 +18,6 @@ Open the terminal from that project saved folder.
 Run the following sequence of commands, to step up the project.
 ##### _npm install cypress --save-dev_
 ##### _npm install cypress-cucumber-preprocessor --save-dev_
-##### _npm install mysqljs/mysql --save-dev_
 
 ## Cypress test execution UI
 In Cypress, the default browser is Electron which is similar to Chrome. It will execute with the Electron browser,
