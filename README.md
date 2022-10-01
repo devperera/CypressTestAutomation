@@ -75,6 +75,7 @@ It gives much clarity to test scenarios. So anyone can read it. Also able to use
 
 ## Test execution video
 By default Cypress will generate the video of the execution at "cypress/videos"*.
+
 https://user-images.githubusercontent.com/13979537/193412402-63b232c8-dad3-43bb-8034-5cf6f2ddc936.mp4
 
 ## Customize the Cypress setting according to your needs
