@@ -38,8 +38,11 @@ Select the test case you want to run from the test execution UI.
 Open the terminal and navigate project folder and type following command.
 #### _npx cypress open_
 This will open the UI, select "E2E Testing" option.
+![ExecutionUI001](https://user-images.githubusercontent.com/13979537/193386075-2ae6b130-bd97-465b-81fe-ea6fcad02867.png)
 Now select Chrome browser and click on "Start E2E Testing in Chrome" option.
+![ExecutionUI002](https://user-images.githubusercontent.com/13979537/193386098-6a66ee9b-cd65-4683-a955-b0e8055c527b.png)
 This will open specs UI, click on the "VerifyLexusPage".
+![ExecutionUI003](https://user-images.githubusercontent.com/13979537/193386107-e67d0816-b31c-47cd-a896-d772ebb0e54c.png)
 Test execution UI open and test execution start.
 
 ## Run test cases from the terminal
@@ -64,17 +67,18 @@ Enter following command to check Cypress version.
 #### _npx cypress --version_
 If you get Cypress version as "10.9.0", then run following command to run test inside the local Docker
 sudo docker run -it -v $PWD:/e2e -w /e2e cypress/included:10.9.0
-Note: if don't have the Docker locally, then this will install first and then execute the test.
+Note: if you don't have the Docker locally, then this will install first and then execute the test.
+![DockerLocal001](https://user-images.githubusercontent.com/13979537/193386376-0c553b70-c14d-4c48-bbdc-f757444eaf93.png)
+![DockerLocal002](https://user-images.githubusercontent.com/13979537/193386383-a1293b0e-23ed-4a45-bd9e-9babadc1bdc2.png)
 
 ## Report generations
-Currenlt there is no report were configue, due to following,
+Currently there is no report were configue, due to following,
 Can see the report, when run by UI executer.
 Can see the execution video file as well.
 
 ## Cucumber - Feature file
 In a test case, the Test scenario will be written in the feature, which is supported by Cucumber.
 It gives much clarity to test scenarios. So anyone can read it. Also able to use Cucumber features as well.
-![feature_file](https://user-images.githubusercontent.com/89372587/147074548-72859c80-6829-489e-b982-72cc75230126.png)
 
 ## Test execution video
 **By default Cypress will generate the video of the execution at #### _"cypress\videos"_.**
