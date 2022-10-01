@@ -75,8 +75,7 @@ It gives much clarity to test scenarios. So anyone can read it. Also able to use
 
 ## Test execution video
 By default Cypress will generate the video of the execution at "cypress/videos"*.
-
-https://user-images.githubusercontent.com/13979537/193392812-a96ac2a1-f939-4bd1-bd05-6c9f1a588688.mp4
+https://user-images.githubusercontent.com/13979537/193412402-63b232c8-dad3-43bb-8034-5cf6f2ddc936.mp4
 
 ## Customize the Cypress setting according to your needs
 1. First open the Cypress test execution UI.
@@ -88,4 +87,3 @@ Can see about the setting here as followed,
 video: true
 So if you want to turn off that option, open the "cypress.json" file and add a line as followed
 "video:false"
-
