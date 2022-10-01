@@ -22,10 +22,3 @@
 //
 //
 // -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-//Common login action method, this can be use at any steps class
-Cypress.Commands.add("loginAction", ( usr, psr, nameElement, passwordElement, loginButtonElement) => {
-    cy.get(nameElement).type( usr)
-    cy.get(passwordElement).type( psr)
-    cy.get(loginButtonElement).click()
-})
