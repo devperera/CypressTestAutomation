@@ -73,6 +73,9 @@ In a test case, the Test scenario will be written in the feature, which is suppo
 It gives much clarity to test scenarios. So anyone can read it. Also able to use Cucumber features as well.
 ![FeatureFile](https://user-images.githubusercontent.com/13979537/193392751-62e604ba-0733-4018-82e2-2cf80303ed1b.png)
 
+## Screenshot on the failure steps
+It takes a screenshot of failure steps. Screenshots can be found at "cypress/screenshots".
+
 ## Test execution video
 By default Cypress will generate the video of the execution at "cypress/videos"*.
 
