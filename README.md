@@ -75,7 +75,8 @@ It gives much clarity to test scenarios. So anyone can read it. Also able to use
 ![FeatureFile](https://user-images.githubusercontent.com/13979537/193392751-62e604ba-0733-4018-82e2-2cf80303ed1b.png)
 
 ## Test execution video
-**By default Cypress will generate the video of the execution at #### _"cypress\videos"_.**
+By default Cypress will generate the video of the execution at "cypress/videos"*.
+https://user-images.githubusercontent.com/13979537/193392812-a96ac2a1-f939-4bd1-bd05-6c9f1a588688.mp4
 
 ## Customize the Cypress setting according to your needs
 1. First open the Cypress test execution UI.
