@@ -34,9 +34,13 @@ unless you specifically mention the different browser names.
 Cypress comes with the test execution UI, to use it's run the following command from the terminal.
 Select the test case you want to run from the test execution UI.
 
-##### _npx cypress open_
-This will open the execution UI. Run specific test cases by selecting from this UI.
-![executionUI](https://user-images.githubusercontent.com/89372587/147542294-8977c5d1-9dac-45c3-9391-84e7c8936eb6.png)
+## Run test cases with Cypress execution UI
+Open the terminal and navigate project folder and type following command.
+#### _npx cypress open_
+This will open the UI, select "E2E Testing" option.
+Now select Chrome browser and click on "Start E2E Testing in Chrome" option.
+This will open specs UI, click on the "VerifyLexusPage".
+Test execution UI open and test execution start.
 
 ## Run test cases from the terminal
 1. To run all the test cases from the terminal with headless mode with Electron browser.
@@ -54,7 +58,7 @@ This will open the execution UI. Run specific test cases by selecting from this 
 7. Run specific test case with specific browser without headless.
 ##### _npx cypress run --spec "cypress/e2e/Testcases/VerifyLexusPage.feature" --browser chrome --headed_
 
-## Cypress test execution with local Docker
+## Run test cases with local Docker
 First navigate to project through the terminal
 Enter following command to check Cypress version.
 #### _npx cypress --version_
