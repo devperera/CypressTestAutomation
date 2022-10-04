@@ -1,4 +1,5 @@
 {
   "rxGalleryElement": ".swiper-slide-active > .link_lightbox > .slider__gallery_ar > .lazy",
+  "gallerySectionElement": "section[id='gallery'] [class='layout_grid_cell_12']",
   "bookATestDriveButtonElement": ":nth-child(4) > :nth-child(1) > .mdc-button"
 }

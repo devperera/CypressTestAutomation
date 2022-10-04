@@ -15,16 +15,16 @@ And('I accept all cookies', () => {
   lexusHomePage.acceptAllCookies();
 });
 
-When('I select COVID 19 information option', () => {
-  lexusHomePage.scrollSelectCovid19InforLink();
-});
-
-Then('I see {string} text available in the page', (textValue) => {
-  lexusHomePage.verifyElementText('h1', textValue);
+Then('I see {string} banner.', (expectedTextValue) => {
+  lexusHomePage.verifyLexusHomePageBannerWithExpected(expectedTextValue);
 });
 
 When('I select RX Flagship Luxury SUV option', () => {
   lexusHomePage.selectRXSUV();
+});
+
+And('I scroll into gallery', () => {
+  lexusRXPage.scrollInToGallery();
 });
 
 Then('I see RX SUV gallery on the page', () => {
@@ -40,20 +40,34 @@ When('I enter followings details', (datatable) => {
     bookATestDrivePage.enterFirstName(element.FirstName);
     bookATestDrivePage.enterLastName(element.LastName);
     bookATestDrivePage.enterEmailAddress(element.EmailAddress);
+    bookATestDrivePage.selectCountryCode(element.CountryCode);
     bookATestDrivePage.enterPhoneNumber(element.PhoneNumber);
     bookATestDrivePage.selectPreferedDate(element.PreferredDate);
     bookATestDrivePage.selectPreferedTime(element.PreferredTime);
     bookATestDrivePage.selectConsultant(element.PreferredSaleConsultant);
     bookATestDrivePage.selectPax(element.NumberOfPax);
+    bookATestDrivePage.selectTestDriveOption(element.TestDriveOption);
   });
 });
 
-When('I checked privacy policy check boxes', () => {
-  bookATestDrivePage.selectPrivacyPolicy();
+When('I checked a driving license checkbox', () => {
+  bookATestDrivePage.selectPrivacyPolicyCheckBox();
 });
 
-When('I cheked marketing information check boxes', () => {
-  bookATestDrivePage.selectMarketingINformation();
+When('I checked a term condition checkbox', () => {
+  bookATestDrivePage.selectPrivacyPolicyCheckBox();
+});
+
+When('I checked a privacy policy checkbox', () => {
+  bookATestDrivePage.selectPrivacyPolicyCheckBox();
+});
+
+When('I checked a marketing information checkbox', () => {
+  bookATestDrivePage.selectMarketingInformationCheckBox();
+});
+
+Then('I see {string} model already selected', (selectModel) => {
+  bookATestDrivePage.selectedTestModel(selectModel);
 });
 
 Then('I see submit button is enable', () => {

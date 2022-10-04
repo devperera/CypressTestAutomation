@@ -1,4 +1,4 @@
 {
-    "elementTextMismatch": "Actual element text, not equal to expected!",
-    "elementTextValue": "COVID-19 Information"
+    "elementTextMismatch": "Actual element text equal to expected",
+    "elementTimeOut": "{timeout: 10000}"
 }

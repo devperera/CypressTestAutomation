@@ -2,12 +2,12 @@ import bookATestDrivePageElement from '../../fixtures/Locators/BookATestDriveEle
 import BasePage from './BasePage';
 
 class BookTestDrivePage extends BasePage {
-  setInformation(elementValue, enterInformation) {
-    cy.wait(500).get(elementValue).click().type(enterInformation);
-  }
 
   enterFirstName(enterFirstName) {
-    this.setInformation(bookATestDrivePageElement.firstNameElement, enterFirstName);
+    this.setInformation(
+      bookATestDrivePageElement.firstNameElement,
+      enterFirstName
+    );
   }
 
   enterLastName(enterLastName) {
@@ -24,6 +24,14 @@ class BookTestDrivePage extends BasePage {
     );
   }
 
+  selectCountryCode(countryCode) {
+    this.selectElementInformation(
+      bookATestDrivePageElement.countryCodeElement,
+      bookATestDrivePageElement.countyList,
+      countryCode
+    );
+  }
+
   enterPhoneNumber(enterPhoneNumber) {
     this.setInformation(
       bookATestDrivePageElement.phoneNumberElement,
@@ -32,13 +40,11 @@ class BookTestDrivePage extends BasePage {
   }
 
   selectPreferedDate(informationEntered) {
-    cy.wait(500).get(bookATestDrivePageElement.preferredDateElement).click();
-    cy.get('[aria-label="' + informationEntered + '"]').click();
-  }
-
-  selectElementInformation(element1, element2, selectInformation) {
-    cy.wait(500).get(element1).click();
-    cy.get(element2).contains(selectInformation).click();
+    this.selectElementByAttributeValue(
+      bookATestDrivePageElement.preferredDateElement,
+      '[aria-label="',
+      informationEntered
+    );
   }
 
   selectPreferedTime(preferredTime) {
@@ -50,11 +56,13 @@ class BookTestDrivePage extends BasePage {
   }
 
   selectConsultant(consultantName) {
-    this.selectElementInformation(
-      bookATestDrivePageElement.saleConsultantTextElement,
-      bookATestDrivePageElement.saleConsultantSelectElement,
-      consultantName
-    );
+    if (!consultantName === null) {
+      this.selectElementInformation(
+        bookATestDrivePageElement.saleConsultantTextElement,
+        bookATestDrivePageElement.saleConsultantSelectElement,
+        consultantName
+      );
+    }
   }
 
   selectPax(paxValue) {
@@ -65,16 +73,37 @@ class BookTestDrivePage extends BasePage {
     );
   }
 
-  selectPrivacyPolicy() {
-    cy.get(bookATestDrivePageElement.privacyPolicyCheckBox).click();
+  selectTestDriveOption(testDriveValue) {
+    cy.get(bookATestDrivePageElement.modeLabel).scrollIntoView();
+    this.selectElementByAttributeValue(
+      bookATestDrivePageElement.testDriveDropDownElement,
+      'div[data-value="',
+      testDriveValue
+    );
   }
 
-  selectMarketingINformation() {
-    cy.get(bookATestDrivePageElement.marketingCheckBox).click();
+  selectLicenseCheckBox() {
+   this.clickOnElement(bookATestDrivePageElement.licenseCheckBox);
   }
 
-  submitButtonEnabled() {
-    cy.get(bookATestDrivePageElement.submitButtonElement).should('be.enabled');
+  selectTermConditionCheckBox() {
+    this.clickOnElement(bookATestDrivePageElement.termConditionCheckBox);
+  }
+
+  selectPrivacyPolicyCheckBox() {
+    this.clickOnElement(bookATestDrivePageElement.privacyPolicyCheckBox);
+  }
+
+  selectMarketingInformationCheckBox() {
+    this.clickOnElement(bookATestDrivePageElement.marketingCheckBox);
+  }
+
+  selectedTestModel(selectModel) {
+    cy.get(bookATestDrivePageElement.testDriveModel).contains(selectModel);
+  }
+
+  submitButtonIsEnabled() {
+    this.elementEnabled(bookATestDrivePageElement.submitButtonElement);
   }
 }
 
