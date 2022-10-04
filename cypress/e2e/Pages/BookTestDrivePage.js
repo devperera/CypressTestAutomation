@@ -74,7 +74,7 @@ class BookTestDrivePage extends BasePage {
   }
 
   selectTestDriveOption(testDriveValue) {
-    cy.get(bookATestDrivePageElement.modeLabel).scrollIntoView();
+    this.scrollToTheElement(bookATestDrivePageElement.modeLabel);
     this.selectElementByAttributeValue(
       bookATestDrivePageElement.testDriveDropDownElement,
       'div[data-value="',
@@ -83,23 +83,26 @@ class BookTestDrivePage extends BasePage {
   }
 
   selectLicenseCheckBox() {
-   this.clickOnElement(bookATestDrivePageElement.licenseCheckBox);
+   this.scrollAndClick(bookATestDrivePageElement.licenseCheckBox);
   }
 
   selectTermConditionCheckBox() {
-    this.clickOnElement(bookATestDrivePageElement.termConditionCheckBox);
+    this.scrollAndClick(bookATestDrivePageElement.termConditionCheckBox);
   }
 
   selectPrivacyPolicyCheckBox() {
-    this.clickOnElement(bookATestDrivePageElement.privacyPolicyCheckBox);
+    this.scrollAndClick(bookATestDrivePageElement.privacyPolicyCheckBox);
   }
 
   selectMarketingInformationCheckBox() {
-    this.clickOnElement(bookATestDrivePageElement.marketingCheckBox);
+    this.scrollAndClick(bookATestDrivePageElement.marketingCheckBox);
   }
 
   selectedTestModel(selectModel) {
-    cy.get(bookATestDrivePageElement.testDriveModel).contains(selectModel);
+    this.verifyElementTextWithExpected(
+      bookATestDrivePageElement.testDriveModel,selectModel,
+      'Remove item'
+    );
   }
 
   submitButtonIsEnabled() {

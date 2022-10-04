@@ -5,25 +5,18 @@ import BasePage from './BasePage';
 
 class LexusHomePage extends BasePage {
   acceptAllCookies() {
-    cy.wait(500).get(lexusHomePageElement.acceptAllCookiesElement).click();
+    this.clickOn(lexusHomePageElement.acceptAllCookiesElement);
   }
 
   verifyLexusHomePageBannerWithExpected(expectedTextValue) {
     this.verifyElementTextWithExpected(
       lexusHomePageElement.bannerElement,
-      expectedTextValue
+      expectedTextValue,''
     );
   }
 
-  scrollSelectCovid19InforLink() {
-    cy.get(lexusHomePageElement.covid19LinkElement)
-      .contains(commonDataValues.elementTextValue)
-      .scrollIntoView()
-      .click();
-  }
-
   selectRXSUV() {
-    cy.get(lexusHomePageElement.selectRXSuvElement).scrollIntoView().click();
+    this.scrollAndClick(lexusHomePageElement.selectRXSuvElement);
   }
 }
 
