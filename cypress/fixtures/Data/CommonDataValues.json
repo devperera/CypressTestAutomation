@@ -1,4 +1,3 @@
 {
-    "elementTextMismatch": "Actual element text equal to expected",
-    "elementTimeOut": "{timeout: 10000}"
+    "elementTextMismatch": "Actual element text equal to expected"
 }
