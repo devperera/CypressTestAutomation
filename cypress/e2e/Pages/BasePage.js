@@ -17,10 +17,15 @@ class BasePage {
     cy.get(element).should('be.enabled');
   }
 
-  verifyElementTextWithExpected(elementValue, expectedElementText) {
+  verifyElementTextWithExpected(
+    elementValue,
+    expectedElementText,
+    stringReplace
+  ) {
     cy.get(elementValue).then((actualElementText) => {
+      actualElementText = actualElementText.text().replace(stringReplace, '');
       assert.equal(
-        actualElementText.text().trim(),
+        actualElementText,
         expectedElementText,
         commonDataValues.elementTextMismatch
       );
@@ -28,28 +33,32 @@ class BasePage {
   }
 
   setInformation(elementValue, enterInformation) {
-    cy.get(elementValue, {timeout: 10000})
+    cy.get(elementValue)
       .click()
       .type(enterInformation);
   }
 
   selectElementInformation(element1, element2, selectInformation) {
-    cy.get(element1, { timeout: 10000 }).click({ force: true });
-    cy.wait(500).get(element2, { timeout: 10000 })
+    cy.get(element1).click({ force: true });
+    cy.get(element2)
       .contains(selectInformation)
       .scrollIntoView()
       .click({ force: true });
   }
 
   selectElementByAttributeValue(element1, stringAttribute, selectInformation) {
-    cy.get(element1, { timeout: 10000 }).click({ force: true });
-    cy.wait(500).get(stringAttribute + selectInformation + '"]', { timeout: 10000 })
+    cy.get(element1).click({ force: true });
+    cy.get(stringAttribute + selectInformation + '"]')
       .scrollIntoView()
-      .click({force: true});
+      .click({ force: true });
   }
 
-  clickOnElement(element) {
-    cy.get(element, { timeout: 10000 }).scrollIntoView().click();
+  scrollAndClick(element) {
+    cy.get(element).scrollIntoView().click({ force: true });
+  }
+
+  clickOn(element) {
+    cy.get(element).scrollIntoView().click();
   }
 }
 

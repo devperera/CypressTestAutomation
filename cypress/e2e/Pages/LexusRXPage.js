@@ -4,7 +4,7 @@ import BasePage from './BasePage';
 class LexusRXPage extends BasePage {
 
   scrollInToGallery() {
-    cy.get(lexusRXPageElement.gallerySectionElement).scrollIntoView()
+    this.scrollAndClick(lexusRXPageElement.gallerySectionElement);
   }
 
   verifyRXGalleryDisplayed() {
@@ -12,9 +12,7 @@ class LexusRXPage extends BasePage {
   }
 
   bookATestDrive() {
-    cy.get(lexusRXPageElement.bookATestDriveButtonElement)
-      .scrollIntoView()
-      .click();
+    this.scrollAndClick(lexusRXPageElement.bookATestDriveButtonElement);
   }
 }
 
